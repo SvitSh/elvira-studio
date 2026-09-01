@@ -2784,3 +2784,198 @@ footer {
   }
 }
 
+/* Booking form and final consumer price list */
+#bookingForm {
+  scroll-margin-top: 130px;
+}
+
+.field-note {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+.form-status {
+  margin-top: 14px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-status.success {
+  color: #245b35;
+  background: #e3f2e6;
+  border: 1px solid #9bc7a5;
+}
+
+.form-status.error {
+  color: #842b2b;
+  background: #f8e3e3;
+  border: 1px solid #dfa2a2;
+}
+
+.price-table th:first-child,
+.price-table td:first-child {
+  width: 58%;
+}
+
+.price-table th:nth-child(2),
+.price-table td:nth-child(2) {
+  width: 42%;
+  text-align: right;
+}
+
+.price-table td:nth-child(2) {
+  color: var(--ink);
+  background: #ebe2bb;
+  font-weight: 800;
+  white-space: normal;
+}
+
+.price-current,
+.price-regular {
+  display: block;
+}
+
+.price-regular {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.service-card,
+.service-body {
+  min-width: 0;
+}
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  height: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    min-width: 0;
+  }
+
+  .container {
+    width: calc(100% - 36px);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero-media {
+    inset: auto;
+    width: 100%;
+    margin: 0 0 18px;
+    border-radius: 12px;
+  }
+
+  .contact-card,
+  .booking-card {
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .form-row-wide {
+    grid-column: auto;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    max-width: 100%;
+  }
+
+  footer {
+    padding-bottom: 92px;
+    text-align: center;
+  }
+
+  .footer-top {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: min(300px, 100%);
+    margin-inline: auto;
+  }
+
+  .footer-links {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .footer-bottom span {
+    width: 100%;
+  }
+
+  .wa-float {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .price-shell {
+    overflow: hidden;
+  }
+
+  .price-table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 12px 9px;
+    overflow-wrap: anywhere;
+  }
+
+  .price-table th:first-child,
+  .price-table td:first-child {
+    width: 52%;
+  }
+
+  .price-table th:nth-child(2),
+  .price-table td:nth-child(2) {
+    width: 48%;
+  }
+}
