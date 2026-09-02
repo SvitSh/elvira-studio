@@ -4127,3 +4127,42 @@ footer {
     min-width: 680px;
   }
 }
+
+/* Полная фотография Эльвиры на странице истории */
+.story-hero-media {
+  width: min(100%, 620px);
+  height: auto !important;
+  aspect-ratio: auto !important;
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+.story-hero-media img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center top;
+}
+
+@media (max-width: 980px) {
+  .story-hero-media {
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .story-hero-media {
+    width: 100%;
+  }
+
+  .story-hero-media img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+}
