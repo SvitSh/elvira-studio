@@ -4130,7 +4130,7 @@ footer {
 
 /* Полная фотография Эльвиры на странице истории */
 .story-hero-media {
-  width: min(100%, 620px);
+  width: min(100%, 520px);
   height: auto !important;
   aspect-ratio: auto !important;
   justify-self: center;
@@ -4149,7 +4149,7 @@ footer {
 
 @media (max-width: 980px) {
   .story-hero-media {
-    width: min(100%, 560px);
+    width: min(100%, 480px);
     margin-inline: auto;
   }
 }
