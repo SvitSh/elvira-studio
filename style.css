@@ -4166,3 +4166,86 @@ footer {
     object-fit: contain !important;
   }
 }
+
+/* Keep the mobile hero flush and its fade after shared overrides. */
+@media (max-width: 760px) {
+  .hero-grid {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero-copy {
+    width: calc(100% - 36px);
+  }
+
+  .hero-media {
+    width: 100%;
+    margin-inline: 0;
+    margin-bottom: -14px;
+    padding-inline: 0;
+    border-radius: 0;
+  }
+
+  .hero-media img {
+    border-radius: 0;
+  }
+
+  .hero-media::after {
+    background: linear-gradient(
+      to top,
+      var(--bg) 0%,
+      rgba(238, 232, 223, .55) 20%,
+      rgba(238, 232, 223, 0) 43%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-media {
+    margin-bottom: -7px;
+  }
+}
+
+.booking-dialog {
+  box-sizing: border-box;
+  width: min(480px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 48px 28px 28px;
+  overflow-y: auto;
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .25);
+  text-align: center;
+}
+
+.booking-dialog::backdrop {
+  background: rgba(30, 25, 20, .58);
+}
+
+.booking-dialog h2 {
+  margin-bottom: 16px;
+}
+
+.booking-dialog p {
+  margin-bottom: 24px;
+}
+
+.booking-dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+html:has(.booking-dialog[open]) {
+  overflow: hidden;
+}
