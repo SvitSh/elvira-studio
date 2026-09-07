@@ -4249,3 +4249,31 @@ footer {
 html:has(.booking-dialog[open]) {
   overflow: hidden;
 }
+
+/* Permanent pensioner benefit, separate from opening prices. */
+.pensioner-discount {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.pensioner-discount h2 {
+  margin-bottom: 8px;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pensioner-discount p {
+  max-width: 80ch;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Opening information now begins the price list, above the categories. */
+.price-shell > .container > .price-offer-note:first-child {
+  margin-top: 0;
+}
