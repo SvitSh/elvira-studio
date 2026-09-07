@@ -3159,9 +3159,6 @@ footer {
     height: auto;
   }
 
-  .price-table-scroll .price-table {
-    min-width: 720px;
-  }
 }
 /* =========================================================
    ELVIRA 2026 — FINAL WARM BEIGE + GOLD OVERRIDES
@@ -3417,20 +3414,14 @@ body {
   text-transform: uppercase;
 }
 
-.price-promo {
+.price-promo,
+.price-normal {
   display: block;
   color: var(--ink);
   font-family: var(--serif);
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
-}
-
-.price-normal {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 21px;
-  font-weight: 600;
 }
 
 .price-regular {
@@ -3498,9 +3489,6 @@ body {
     font-size: 11px;
   }
 
-  .price-table-scroll .price-table {
-    min-width: 680px;
-  }
 }
 
 
@@ -4121,13 +4109,6 @@ footer {
   fill: currentColor;
 }
 
-/* Mobile price-table readability */
-@media (max-width: 620px) {
-  .price-table-scroll .price-table {
-    min-width: 680px;
-  }
-}
-
 /* Полная фотография Эльвиры на странице истории */
 .story-hero-media {
   width: min(100%, 520px);
@@ -4276,4 +4257,96 @@ html:has(.booking-dialog[open]) {
 /* Opening information now begins the price list, above the categories. */
 .price-shell > .container > .price-offer-note:first-child {
   margin-top: 0;
+}
+
+/* Mobile price lists: keep each service and both numeric cells together. */
+@media (max-width: 760px) {
+  .price-shell .price-table-scroll {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .price-shell .price-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  /* Keep the column headings available to assistive technology. */
+  .price-shell .price-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .price-shell .price-table tbody {
+    display: grid;
+    gap: 16px;
+  }
+
+  .price-shell .price-table tbody tr {
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) minmax(0, 2fr);
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+
+  .price-shell .price-table-scroll .price-table td {
+    display: block;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .price-shell .price-table-scroll .price-table td:first-child {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .price-shell .price-table-scroll .price-table td:nth-child(2) {
+    align-self: end;
+    text-align: left;
+  }
+
+  .price-shell .price-table-scroll .price-table td:nth-child(3) {
+    align-self: end;
+    text-align: right;
+  }
+
+  body:has(.price-shell) > .wa-float {
+    position: static;
+    width: fit-content;
+    max-width: calc(100% - 36px);
+    margin: 20px auto;
+  }
+}
+
+/* Shared price-list typography for mobile cards and desktop tables. */
+.price-shell .price-name {
+  font-weight: 600;
+}
+
+.price-shell .price-table-scroll .price-table td:nth-child(2) {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.price-shell .price-promo-label {
+  font-weight: 500;
 }
