@@ -1104,8 +1104,7 @@ p {
   gap: 24px;
 }
 
-.contact-card,
-.booking-card {
+.contact-card {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -1174,104 +1173,6 @@ p {
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 28px;
-}
-
-.booking-card {
-  padding: 38px;
-}
-
-.booking-card h2 {
-  font-size: clamp(34px, 4vw, 48px);
-  margin-bottom: 12px;
-}
-
-.form-intro {
-  max-width: 720px;
-  margin-bottom: 28px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0 18px;
-}
-
-.form-row-wide {
-  grid-column: 1/-1;
-}
-
-.form-row {
-  margin-bottom: 16px;
-}
-
-.form-row label {
-  display: block;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 7px;
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  background: #eeeee7;
-  border-radius: 12px;
-  padding: 13px 14px;
-  color: var(--ink);
-  outline: none;
-}
-
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
-  border-color: var(--yellow-deep);
-  box-shadow: 0 0 0 3px rgba(255, 211, 77, 0.13);
-}
-
-.form-row textarea {
-  min-height: 92px;
-  resize: vertical;
-}
-
-.form-note {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 12px;
-}
-
-.booking-card .btn {
-  width: 100%;
-}
-
-.consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 4px 0 18px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--soft);
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.consent input {
-  width: 18px;
-  height: 18px;
-  margin: 1px 0 0;
-  accent-color: var(--yellow-deep);
-}
-
-.cancellation-note {
-  margin-top: 14px;
-  font-size: 13px;
-  color: var(--ink);
 }
 
 /* Price page */
@@ -1361,7 +1262,7 @@ footer {
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px 44px;
 }
 
@@ -1565,18 +1466,12 @@ footer {
 
   .about-copy-wide,
   .gift-card,
-  .contact-card,
-  .booking-card {
+  .contact-card {
     padding: 24px;
   }
 
-  .contact-list,
-  .form-grid {
+  .contact-list {
     grid-template-columns: 1fr;
-  }
-
-  .form-row-wide {
-    grid-column: auto;
   }
 
   .contact-actions {
@@ -1931,95 +1826,6 @@ section {
   background: #444442;
 }
 
-.booking-card {
-  background: #e8e8e6;
-  border-color: #bfbfbd;
-  border-radius: 12px;
-  padding: 42px;
-  box-shadow: none;
-}
-
-.booking-card h2 {
-  font-size: clamp(32px, 3.5vw, 46px);
-}
-
-.form-intro {
-  margin-bottom: 18px;
-  max-width: 780px;
-}
-
-.language-note {
-  margin: 0 0 26px;
-  max-width: 820px;
-  padding: 15px 20px;
-  border-left: 3px solid #ae8520;
-  background: #dddddb;
-  color: #464644;
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.form-row label {
-  font-size: 12px;
-  letter-spacing: 0.025em;
-  text-transform: none;
-  color: #464644;
-}
-
-.form-row label small {
-  font-size: 11px;
-  font-weight: 400;
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  background: #f4f4ed;
-  border: 1px solid #b1b1af;
-  border-radius: 5px;
-  min-height: 48px;
-  font-size: 16px;
-}
-
-.form-row textarea {
-  min-height: 106px;
-}
-
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
-  border-color: #725714;
-  box-shadow: 0 0 0 3px #e4c45466;
-}
-
-.consent {
-  background: transparent;
-  border: 0;
-  padding: 4px 0;
-  border-radius: 0;
-  align-items: flex-start;
-}
-
-.consent input {
-  flex: 0 0 19px;
-  margin-top: 2px;
-}
-
-.booking-card .btn {
-  width: auto;
-  min-width: 300px;
-}
-
-.form-note {
-  max-width: 840px;
-}
-
-.form-note a {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .page-hero {
   background: #dfdfdd;
   border-bottom: 3px solid #e9bc3b;
@@ -2256,8 +2062,7 @@ footer {
     gap: 12px;
   }
 
-  .contact-card,
-  .booking-card {
+  .contact-card {
     padding: 28px;
   }
 
@@ -2342,22 +2147,12 @@ footer {
     width: 100%;
   }
 
-  .contact-card,
-  .booking-card {
+  .contact-card {
     padding: 25px 22px;
   }
 
   .contact-actions {
     flex-direction: column;
-  }
-
-  .booking-card .btn {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .language-note {
-    padding: 13px 14px;
   }
 
   .info-card {
@@ -2834,49 +2629,6 @@ footer {
   }
 }
 
-/* Booking form and final consumer price list */
-#bookingForm {
-  scroll-margin-top: 130px;
-}
-
-.field-note {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.honeypot {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  clip-path: inset(50%) !important;
-  white-space: nowrap !important;
-}
-
-.form-status {
-  margin-top: 14px;
-  padding: 13px 15px;
-  border-radius: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.form-status.success {
-  color: #245b35;
-  background: #e3f2e6;
-  border: 1px solid #9bc7a5;
-}
-
-.form-status.error {
-  color: #842b2b;
-  background: #f8e3e3;
-  border: 1px solid #dfa2a2;
-}
-
 .price-table th:first-child,
 .price-table td:first-child {
   width: 58%;
@@ -2947,24 +2699,9 @@ footer {
     border-radius: 12px;
   }
 
-  .contact-card,
-  .booking-card {
+  .contact-card {
     width: 100%;
     padding: 24px 18px;
-  }
-
-  .form-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .form-row-wide {
-    grid-column: auto;
-  }
-
-  .form-row input,
-  .form-row select,
-  .form-row textarea {
-    max-width: 100%;
   }
 
   footer {
@@ -3252,7 +2989,7 @@ body {
   border-top-color: rgba(120, 88, 0, 0.22);
 }
 
-/* Syyskuun kampanjan pieni kultainen merkki */
+/* Small gold offer label */
 .service-promo-label {
   display: inline-block;
   margin-bottom: 7px;
@@ -3330,17 +3067,10 @@ body {
 }
 
 .contact-card,
-.booking-card,
 .info-card,
 .about-copy-wide {
   background: #f7f1e8;
   border-color: #d7c9b6;
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  background: #fbf6ee;
 }
 
 /* WhatsApp-painike sivuston omiin väreihin */
@@ -3360,7 +3090,7 @@ body {
 }
 
 /* =========================================================
-   HINNASTO — KESTO + HINTA + SYYSKUUN AVAJAISHINNAT
+   HINNASTO — KESTO, NORMAALIHINNAT JA EDUT
    ========================================================= */
 
 .price-shell {
@@ -3508,9 +3238,6 @@ body,
 p,
 .lead,
 .small,
-.field-note,
-.form-note,
-.cancellation-note,
 .updated {
   color: var(--muted);
 }
@@ -3838,7 +3565,7 @@ strong,
   color: var(--ink);
 }
 
-/* Contact and form */
+/* Contact and booking */
 .contact-section {
   background: var(--bg);
 }
@@ -3876,48 +3603,6 @@ strong,
   background: var(--muted);
   border-color: var(--muted);
   color: var(--paper);
-}
-
-.booking-card {
-  background: var(--paper);
-  border-color: var(--line);
-}
-
-.language-note,
-.consent {
-  background: var(--soft);
-  border-color: var(--line);
-  color: var(--ink);
-}
-
-.form-row label {
-  color: var(--muted);
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  background: var(--bg);
-  border-color: var(--line);
-  color: var(--ink);
-}
-
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201, 150, 44, .16);
-}
-
-.form-status.success,
-.form-status.error {
-  background: var(--soft);
-  border-color: var(--gold);
-  color: var(--ink);
-}
-
-.form-status.error {
-  border-color: var(--ink);
 }
 
 /* Price list */
@@ -4187,51 +3872,7 @@ footer {
   }
 }
 
-.booking-dialog {
-  box-sizing: border-box;
-  width: min(480px, calc(100% - 32px));
-  max-height: calc(100dvh - 32px);
-  margin: auto;
-  padding: 48px 28px 28px;
-  overflow-y: auto;
-  border: 1px solid var(--gold);
-  border-radius: 16px;
-  background: var(--paper);
-  color: var(--ink);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, .25);
-  text-align: center;
-}
-
-.booking-dialog::backdrop {
-  background: rgba(30, 25, 20, .58);
-}
-
-.booking-dialog h2 {
-  margin-bottom: 16px;
-}
-
-.booking-dialog p {
-  margin-bottom: 24px;
-}
-
-.booking-dialog-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
-  font-size: 28px;
-  cursor: pointer;
-}
-
-html:has(.booking-dialog[open]) {
-  overflow: hidden;
-}
-
-/* Permanent pensioner benefit, separate from opening prices. */
+/* Permanent pensioner benefit. */
 .pensioner-discount {
   margin-top: 20px;
   padding: 20px 22px;
@@ -4254,7 +3895,7 @@ html:has(.booking-dialog[open]) {
   color: var(--ink);
 }
 
-/* Opening information now begins the price list, above the categories. */
+/* Current offers begin the price list, above the categories. */
 .price-shell > .container > .price-offer-note:first-child {
   margin-top: 0;
 }
@@ -4328,13 +3969,6 @@ html:has(.booking-dialog[open]) {
     align-self: end;
     text-align: right;
   }
-
-  body:has(.price-shell) > .wa-float {
-    position: static;
-    width: fit-content;
-    max-width: calc(100% - 36px);
-    margin: 20px auto;
-  }
 }
 
 /* Shared price-list typography for mobile cards and desktop tables. */
@@ -4349,4 +3983,90 @@ html:has(.booking-dialog[open]) {
 
 .price-shell .price-promo-label {
   font-weight: 500;
+}
+
+/* Existing gold banner; darken only its small eyebrow text for contrast. */
+.story-final-cta .eyebrow {
+  color: var(--ink);
+}
+
+
+
+/* One booking/contact block, using the existing card and spacing. */
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 32px;
+}
+
+.contact-copy {
+  max-width: 720px;
+}
+
+.contact-card > .contact-actions {
+  margin-top: 0;
+}
+
+.contact-card > .contact-list {
+  grid-column: 1 / -1;
+}
+
+.contact-card .contact-item {
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+
+.service-foot > div {
+  min-width: 0;
+}
+
+.service-promo-label,
+.price-promo-label {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1000px) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-card > .contact-actions {
+    margin-top: 24px;
+  }
+}
+
+/* The original pill floats only in clear space; its fallback belongs to the footer. */
+footer {
+  padding-bottom: 24px;
+}
+
+.wa-dock {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 44px;
+  margin-top: 24px;
+}
+
+footer .wa-float {
+  position: static;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  margin: 0;
+}
+
+footer .wa-float.is-floating {
+  position: fixed;
+  top: var(--wa-top);
+  right: var(--wa-edge, 20px);
+  bottom: auto;
+}
+
+@media (max-width: 760px) {
+  .wa-dock {
+    justify-content: center;
+  }
 }
